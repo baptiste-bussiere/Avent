@@ -1,0 +1,36 @@
+  {"1": {
+    "title": "Une soirée crêpes enchantée",
+    "subtitle": "Ce soir, c’est toi la reine de la crêpe.",
+    "image": "/gifts/1.png",
+    "description": "À utiliser quand tu veux : soirée crêpes maison avec tout ce que tu aimes."
+  },
+    "2": {
+    "title": "Bon pour un massage relaxant",
+    "subtitle": "Détente assurée.",
+    "image": "/gifts/2.png",
+    "description": "Un massage de 30 minutes pour te relaxer après une longue journée."
+  },
+    "3": {
+    "title": "Journée spa",
+    "subtitle": "Prends soin de toi.",
+    "image": "/gifts/3.png",
+    "description": "Une journée complète au spa avec accès au sauna, hammam et piscine."  
+  },
+    "4": {
+    "title": "Atelier cuisine ensemble",
+    "subtitle": "Cuisinons en duo.",
+    "image": "/gifts/4.png",
+    "description": "Un atelier de cuisine pour apprendre à préparer un plat que tu aimes."  },
+  "5": {
+    "title": "Balade en montgolfière",
+    "subtitle": "Vue imprenable garantie.",
+    "image": "/gifts/5.png",
+    "description": "Une aventure inoubliable avec une vue panoramique."
+  },
+    "6": {
+    "title": "Soirée cinéma à la maison",
+    "subtitle": "Ton film préféré sur grand écran.",
+    "image": "/gifts/6.png",
+    "description": "Une soirée cinéma avec popcorn, ton film préféré et tout le confort de la maison."
+  }
+}

@@ -1,0 +1,262 @@
+@use './font.scss';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    font-family: 'Monarcha', Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+    height: 100VH;
+    width: 100%;
+}
+
+
+.intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(145deg, #fcd94e, #f5b733 45%, #f2a826 100%);
+    color: white;
+    font-family: 'Mona', Arial, sans-serif;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .intro__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__container {
+        position: absolute;
+        top: 33px;
+        left: calc(30px / 1.5);
+        bottom: 30px;
+        right: calc(30px / 1.5);
+        border: 5px solid #AA1B2F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+            h1 {
+                font-size: 2.5em;
+                margin: 0;
+                padding: 0.2em 0;
+                color: #AA1B2F;
+
+                font-family: 'Monarcha', Arial, sans-serif;
+
+
+            }
+
+            color: #AA1B2F;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.2em;
+            margin: 0.7em;
+
+
+
+
+        }
+
+        button {
+            margin-top: 2em;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            background-color: #AA1B2F;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-family: 'Monarcha', Arial, sans-serif;
+            color: white;
+
+            &:hover {
+                background-color: #6c101c;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .intro {
+        &__container {
+            top: 16px;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            border-width: 3px;
+            padding: 1rem;
+        }
+
+        &__container__content {
+            margin: 1rem;
+            align-items: center;
+            text-align: center;
+
+            h1 {
+                font-size: 1.4em;
+                line-height: 1.2;
+            }
+        }
+
+        &__container__text {
+            font-size: 0.9em;
+            line-height: 1.4em;
+
+            &--large {
+                font-size: 1.1em;
+            }
+        }
+
+        &__container button {
+            margin-top: 1.5em;
+            padding: 0.7em 1em;
+            font-size: 0.9em;
+        }
+
+        .intro__loading {
+            img {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 8px;
+            }
+
+
+
+        }
+    }
+
+}
+
+.hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-family: 'Quin', Arial, sans-serif;
+    z-index: 1000;
+    pointer-events: none;
+
+    &__top-left {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        text-align: left;
+        font-size: 1.1em;
+    }
+
+    &__top-right {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-align: right;
+        pointer-events: all;
+
+        button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-family: 'Quin', Arial, sans-serif;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            cursor: pointer;
+
+            .hud__music-bars {
+
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                gap: 4px;
+
+                .hud__music-bar {
+                    width: 2px;
+                    height: 25px;
+                    transform: scaleY(0.1);
+                    background-color: white;
+&--active {
+    animation: bounce 0.9s infinite ease-in-out;
+
+}
+                    &:nth-child(1) {
+                        animation-delay: 0s;
+                    }
+
+                    &:nth-child(2) {
+                        animation-delay: 0.1s;
+                    }
+
+                    &:nth-child(3) {
+                        animation-delay: -0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 80%;
+    }
+}
+
+
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.5);
+    }
+}
