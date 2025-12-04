@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
-import { BOOK_MEDIA } from '../data/mediaConfig'
+import { BOOK_MEDIA } from '../data/MediaConfig.ts'
 
 type ModelProps = JSX.IntrinsicElements['group'] & {
   onBookcaseClick?: () => void
