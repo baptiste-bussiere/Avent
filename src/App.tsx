@@ -295,7 +295,7 @@ function Hud({
   return (
     <div className="hud">
       <div className="hud__top-left">
-        <span className="hud__value">{daysRemaining} days until Christmas</span>
+        <span className="hud__value">          {daysRemaining === 0 ? "Merry Christmas, Milla the witch ! " :  `${daysRemaining}  day${daysRemaining > 1 ? 's' : ''} before Christmas`}</span>
       </div>
 
       <div className="hud__top-right">
